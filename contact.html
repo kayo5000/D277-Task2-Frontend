@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Illinois and three of its cities through this educational website.">
+  <title>Ask a question | Explore Illinois</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer="defer">
+</script>
+</head>
+<body>
+  <!-- The same frame and navigation appear on all five pages. -->
+  <header class="container site-header">
+    <a class="brand" href="index.html">
+<span class="site-mark" aria-hidden="true">◈</span> Explore Illinois</a>
+    <p class="project-note">An educational city guide</p>
+  </header>
+  <nav class="nav-bar" aria-label="Main navigation">
+<ul class="container nav-list">
+<li>
+<a href="index.html">Home</a>
+</li>
+<li>
+<a href="springfield.html">Springfield</a>
+</li>
+<li>
+<a href="chicago.html">Chicago</a>
+</li>
+<li>
+<a href="peoria.html">Peoria</a>
+</li>
+<li>
+<a href="contact.html" aria-current="page">Ask a question</a>
+</li>
+</ul>
+</nav>
+  <main class="container page-layout">
+    <section class="stack" aria-labelledby="page-title">
+<p class="eyebrow">Let curiosity lead</p>
+<h1 id="page-title">Ask a question.</h1>
+<p class="lead">What would you like to know about Illinois or its cities?</p>
+<p>This is a practice form. All fields are required. Your question is checked in this browser and is never sent or saved.</p>
+<noscript>
+<p>Enable JavaScript to use the local email confirmation check. The form is disabled until JavaScript loads.</p>
+</noscript>
+<form id="contact-form" action="contact.html" method="get">
+<div class="field">
+<label for="first-name">First name</label>
+<input id="first-name" name="first-name" type="text" autocomplete="given-name" required="required" disabled="disabled">
+</div>
+<div class="field">
+<label for="last-name">Last name</label>
+<input id="last-name" name="last-name" type="text" autocomplete="family-name" required="required" disabled="disabled">
+</div>
+<div class="field">
+<label for="email">Email address</label>
+<input id="email" name="email" type="email" autocomplete="email" required="required" disabled="disabled">
+</div>
+<div class="field">
+<label for="confirm-email">Confirm email address</label>
+<input id="confirm-email" name="confirm-email" type="email" autocomplete="email" required="required" disabled="disabled">
+</div>
+<div class="field full">
+<label for="question">Your question</label>
+<textarea id="question" name="question" rows="6" required="required" disabled="disabled">
+</textarea>
+</div>
+<button type="submit" disabled="disabled">Submit</button>
+<p id="form-status" class="full" role="status" aria-live="polite">
+</p>
+</form>
+</section>
+    <aside class="stack" aria-labelledby="aside-title">
+<h2 id="aside-title">Explore while you think</h2>
+<img src="assets/illinois.svg" width="180" height="220" alt="Stylized outline of Illinois with markers for the three featured cities.">
+<ul>
+<li>
+<a href="springfield.html">Springfield</a>
+</li>
+<li>
+<a href="chicago.html">Chicago</a>
+</li>
+<li>
+<a href="peoria.html">Peoria</a>
+</li>
+</ul>
+<p class="small">Original illustration. Educational practice site, not an official contact service.</p>
+</aside>
+  </main>
+  <footer class="container site-footer">
+<p>Explore Illinois · Student practice project · Not a government website.</p>
+<a href="contact.html">Ask a question</a>
+</footer>
+</body>
+</html>

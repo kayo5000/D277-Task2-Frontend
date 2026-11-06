@@ -1,0 +1,76 @@
+/* Shared colors and type keep the five pages consistent. */
+:root { --ink: #172f43; --muted: #4e6270; --paper: #f8fafb; --line: #c8d5dd; --accent: #a84624; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 Arial, sans-serif; }
+h1, h2, h3, p, ul, ol, figure, dl { margin: 0; }
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.15; }
+h1 { font-size: clamp(38px, 5vw, 64px); }
+h2 { font-size: 30px; }
+h3 { font-size: 23px; }
+a { color: #793217; text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+.site-header { padding-block: 28px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.brand { color: var(--ink); font: bold 28px Georgia, serif; text-decoration: none; }
+/* Relative positioning nudges the small site mark into optical alignment. */
+.site-mark { position: relative; top: 2px; display: inline-block; color: var(--accent); }
+.project-note, .eyebrow { font-size: 12px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; }
+.nav-bar { background: var(--ink); }
+.nav-list { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 4px; }
+.nav-list a { display: block; padding: 16px 20px; color: white; font-weight: bold; text-decoration: none; }
+/* Rollover makes navigation respond visibly to a pointer. */
+.nav-list a:hover, .nav-list a[aria-current="page"] { background: #38566c; }
+.page-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(230px, 1fr); gap: 40px; padding-block: 40px 64px; align-items: start; }
+.stack { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.eyebrow { color: var(--accent); }
+.lead { color: var(--muted); font-size: 19px; max-width: 65ch; }
+.scene { position: relative; }
+.scene img { display: block; width: 100%; height: auto; border-radius: 8px; }
+/* Absolute positioning places a readable caption on the illustration. */
+.image-label { position: absolute; bottom: 16px; left: 16px; padding: 6px 12px; color: white; background: var(--ink); font-size: 13px; }
+aside { padding: 24px; background: #e9eff3; border-radius: 8px; }
+aside h2 { font-size: 24px; }
+ul, ol { padding-left: 24px; }
+li { padding-block: 5px; }
+.city-cards { display: grid; gap: 16px; }
+.city-card { display: flex; align-items: center; gap: 20px; border: 1px solid var(--line); padding: 20px; border-radius: 6px; background: white; }
+.city-card img { width: 130px; height: 90px; object-fit: cover; border-radius: 4px; }
+.city-card div { display: grid; gap: 8px; }
+.intro { display: flow-root; }
+/* A floated state illustration lets the introduction wrap beside it. */
+.state-image { float: left; width: 112px; height: 136px; margin: 0 20px 12px 0; }
+.facts { display: grid; grid-template-columns: 1fr 2fr; border-top: 1px solid var(--line); }
+.facts dt, .facts dd { padding: 14px 12px; border-bottom: 1px solid var(--line); margin: 0; }
+.facts dt { font-weight: bold; background: #e9eff3; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: white; }
+caption { text-align: left; font-weight: bold; padding-bottom: 12px; }
+th, td { padding: 12px; border: 1px solid var(--line); text-align: left; }
+thead { background: #e9eff3; }
+.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+.small { font-size: 14px; color: var(--muted); }
+.sources { border-top: 1px solid var(--line); padding-top: 24px; }
+#contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 24px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.full { grid-column: 1 / -1; }
+label { font-weight: bold; }
+input, textarea { padding: 12px; width: 100%; min-width: 0; border: 1px solid #708390; border-radius: 4px; background: white; color: var(--ink); font: inherit; }
+textarea { resize: vertical; min-height: 150px; }
+button { width: fit-content; padding: 12px 24px; border: 0; border-radius: 4px; background: var(--accent); color: white; font: bold 16px/1.5 Arial, sans-serif; cursor: pointer; }
+button:hover { background: #793217; }
+button:disabled { opacity: .6; cursor: default; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; }
+@media (max-width: 760px) {
+  .page-layout { grid-template-columns: 1fr; gap: 32px; padding-top: 28px; }
+  .site-header { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .nav-list a { padding: 12px; }
+  .city-card { align-items: flex-start; }
+  .city-card img { width: 90px; height: 80px; }
+  #contact-form { grid-template-columns: 1fr; padding: 20px; }
+  .facts { grid-template-columns: 1fr; }
+  .facts dt { padding-bottom: 4px; border-bottom: 0; }
+  .facts dd { padding-top: 4px; }
+  table { table-layout: fixed; }
+  th, td { padding: 6px; font-size: 12px; overflow-wrap: anywhere; }
+}
